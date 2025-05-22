@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Rainy Heart';
+    src: url('../../fonts/rainyhearts.ttf') format('truetype');
+}
+
 :root {
     --gray-100: #EEEEEE;
     --gray-700: #1D1616;  
@@ -6,6 +11,7 @@
     --font-vibur: "Vibur", serif;
     --font-red-hat: "Red Hat Display", serif;
     --font-open-sans: "Open Sans", sans-serif;
+    --font-rainy-heart: "Rainy Heart", serif;
 }
 
 header {
@@ -14,30 +20,68 @@ header {
     align-items: center;
     flex-direction: column;
 
-    height: 100vh;
+    overflow: hidden;
 
-    background: var(--gray-700);
-    background-blend-mode: color-dodge;
+    height: 100vh;
 
     gap: 1rem;
 
     padding: 1rem 1rem;
 
-    img {
-        height: 200px;
-    }
-    
-    h1 {
-        font-family: var(--font-vibur);
-        letter-spacing: 5px;
-        font-weight: 400;
-        font-style: normal;
-    }
+    font-family: var(--font-rainy-heart);
 
-    p {
-        font-family: var(--font-red-hat);
+    fieldset {
+        width: 65%;
+        border-radius: 15px;
+        padding: 1rem 1rem;
+
+        legend {
+            padding: 0;
+            font-size: 32px;
+        }
+
+        .link-wrap {
+
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
     }
 }
+
+.login-screen {
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #2d2dff;
+    color: white;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #1a1ac7;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
 @media screen and (max-width: 1024px) {
     header {
@@ -47,33 +91,28 @@ header {
         flex-direction: column;
 
         height: 100vh;
-        width: 100vw;
-
-        background-color: #1D1616;
-        
+        width: 100vw;     
 
         gap: 1rem;
 
         overflow: hidden;
 
-        
-        img {
-            border-radius: 50%;
-            border: 2px solid var(--red);
-            
-            height: 200px;
-        }
+        fieldset {
+            width: 100%;
+            border-radius: 15px;
+            padding: 0.75rem 0.75rem 1.3rem;
 
-        h1 {
-            text-align: center;
-            font-size: calc(2rem - .4rem);
-            color: var(--gray-100);
-        }
+            legend {
+                padding: 0 2px;
+                font-size: 32px;
+            }
 
-        p {
-            font-size: 20px;
-            font-weight: lighter;
-            color: var(--gray-100);
+            .link-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
         }
     }
 }

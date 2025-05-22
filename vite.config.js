@@ -7,6 +7,5 @@ export default defineConfig({
     cors: false
   },
   plugins: [react()],
-  base: '/my-portfolio/',
-  mode: 'production',
+  mode: 'development',
 })

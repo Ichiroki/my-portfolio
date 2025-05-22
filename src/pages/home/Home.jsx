@@ -1,24 +1,23 @@
-import mirai from "/mirai.jpg"
+import NavLink from '../../component/NavLink'
+import Typewriter from '../../component/Typewriter'
 import './home.css'
-import Anchor from "../../component/Anchor"
 import { useLayoutEffect } from "react"
 
 function Home() {
     useLayoutEffect(() => {
         document.title = "My Portfolio | Home"
     }, [])
+
     return (
-        <header id="home">           
-            <div>
-                <img src={mirai} alt="" className="image" />
-            </div>
-            <h1 className="name" data-value="Fahrezi Rizqiawan">Fahrezi Rizqiawan</h1>
-            <p>Web Developer</p>
-            <div className="link-list">
-                <Anchor href='/about'>About</Anchor>
-                <Anchor href='/projects'>Projects</Anchor>
-                <Anchor href='/contact'>Contact</Anchor>
-            </div>
+        <header id="home">         
+            <fieldset className='fade-in'>
+                <legend>Dashboard</legend>
+                <div className='link-wrap'>
+                    <NavLink to={'/about'}>Who am i ?</NavLink>
+                    <NavLink to={'/projects'}>What'd i do ?</NavLink>
+                    <NavLink to={'/contact'}>How to contact me ?</NavLink>
+                </div>
+            </fieldset>  
         </header>
     )
 }
