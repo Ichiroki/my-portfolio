@@ -1,6 +1,6 @@
+import { useLayoutEffect } from 'react'
+import ButtonLink from '../../component/ButtonLink'
 import './contact.css'
-import Anchor from '../../component/Anchor'
-import { useLayoutEffect } from 'react';
 
 function Contact() {
     useLayoutEffect(() => {
@@ -8,34 +8,42 @@ function Contact() {
     }, [])
     return (
         <>
-            <Anchor href='/' round={true} floating={true}><i className="bi bi-house"></i></Anchor>
-            <section className="contact" id="contact">
-                <div>
-                    <h1>Reach Me On</h1>
-                </div>
-                <div className="social-media">
-                    <a href="#">
-                        <i className="bi bi-facebook"></i>
-                        <span>Facebook</span>
-                    </a>
-                    <a href="#">
-                        <i className="bi bi-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="#">
-                        <i className="bi bi-github"></i>
-                        <span>Github</span>
-                    </a>
-                    <a href="#">
-                        <i className="bi bi-linkedin"></i>
-                        <span>Linkedin</span>
-                    </a>
-                    <a href="#">
-                        <i className="bi bi-envelope"></i>
-                        <span>Email</span>
-                    </a>
-                </div>
-            </section>
+            <header id="about" className='about'>         
+                <fieldset className='fade-in glassmorphism'>
+                    <legend>
+                        <h1>How to contact me ?</h1>
+                    </legend>
+                    <div className='about-content'>
+                        <div
+                        style={{
+                            display: 'flex',
+                            gap: '5px'
+                        }}>
+                            <ButtonLink to={'/'}>
+                                <i className="bi bi-facebook"></i>
+                                <span>Facebook</span>
+                            </ButtonLink>
+                            <ButtonLink to={'/'}>
+                                <i className="bi bi-instagram"></i>
+                                <span>Instagram</span>
+                            </ButtonLink>
+                            <ButtonLink to={'/'}>
+                                <i className="bi bi-github"></i>
+                                <span>GitHub</span>
+                            </ButtonLink>
+                            <ButtonLink to={'/'}>
+                                <i className="bi bi-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </ButtonLink>
+                            <ButtonLink to={'/'}>
+                                <i className="bi bi-envelope"></i>
+                                <span>Email</span>
+                            </ButtonLink>
+                        </div>
+                        <ButtonLink to={'/'}>Back to Dashboard</ButtonLink>
+                    </div>
+                </fieldset>  
+            </header>
         </>
     );
 }

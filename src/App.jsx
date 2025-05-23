@@ -1,25 +1,40 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import About from "./pages/about/About"
 import Home from "./pages/home/Home"
 import Projects from "./pages/projects/Projects"
 import Contact from "./pages/contact/Contact"
-import { useLayoutEffect } from "react"
+import { useLayoutEffect, useRef } from "react"
 import Starfield from "./component/Starfield"
+import { CSSTransition, TransitionGroup } from "react-transition-group"
 
 function App() {
+  const location = useLocation()
+  const nodeRef = useRef(null)
+
   useLayoutEffect(() => {
       document.title = "My Portfolio"
   }, [])
+  
   return (
     <>
       <Starfield/>
-
-      <Routes>
-        <Route path="/" element={<Home title="Home"/>} />
-        <Route path="/about" element={<About title="About"/>} />
-        <Route path="/projects" element={<Projects title="Projects"/>} />
-        <Route path="/contact" element={<Contact title="Contact"/>} />
-      </Routes>
+      <TransitionGroup>
+        <CSSTransition
+          key={location.pathname}
+          classNames="fade"
+          timeout={300}
+          nodeRef={nodeRef}
+        >
+          <div ref={nodeRef}>
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+        </CSSTransition>
+      </TransitionGroup>
     </>
   );
 }

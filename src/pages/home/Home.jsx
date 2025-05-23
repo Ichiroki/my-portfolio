@@ -1,16 +1,11 @@
 import NavLink from '../../component/NavLink'
-import Typewriter from '../../component/Typewriter'
 import './home.css'
-import { useLayoutEffect } from "react"
 
 function Home() {
-    useLayoutEffect(() => {
-        document.title = "My Portfolio | Home"
-    }, [])
 
     return (
         <header id="home">         
-            <fieldset className='fade-in'>
+            <fieldset className='glassmorphism fade-in'>
                 <legend>Dashboard</legend>
                 <div className='link-wrap'>
                     <NavLink to={'/about'}>Who am i ?</NavLink>

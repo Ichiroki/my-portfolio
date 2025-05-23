@@ -1,9 +1,9 @@
-import Anchor from '../../component/Anchor'
+import ButtonLink from '../../component/ButtonLink';
 import './projects.css'
-import bahagiaku from '/bahagiaku.png'
-import scythe from '/scythe.png'
-import swdm from '/swdm.png'
-import stockGudang from '/stock-gudang.png'
+import scythe from '/img/scythe.png'
+import swdm from '/img/swdm.png'
+import stockGudang from '/img/stock-gudang.png'
+import rapb from '/img/rapb.png'
 import { useLayoutEffect } from 'react'
 
 function Projects() {
@@ -12,33 +12,75 @@ function Projects() {
     }, [])
     return (
         <>
-            <Anchor href="/" round={true} floating={true}><i className="bi bi-house"></i></Anchor>
-            <section className="project" id="project">
-                <div>
-                    <h1>Project</h1>
+            <header id="about" className='about'>         
+            <fieldset className='fade-in glassmorphism'>
+                <legend>
+                    <h1>What'd i do ?</h1>
+                </legend>
+                <div className='about-content'>
+                    <div>
+                        <p
+                            style={{
+                                textAlign: 'center'
+                            }}
+                        >
+                            I've been implement much of works that was originally created by me, this work either a web application or 3d Models. take a look.
+                        </p>
+                        <div 
+                        style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            gap: '10px',
+                            marginTop: '25px'
+                        }}>
+                            <div>
+                                <h4 style={{
+                                    textAlign: 'center',
+                                    marginBottom: "10px",
+                                    fontSize: "20px"
+                                }}>Scythe of the dark doom</h4>
+                                <img src={scythe} alt="" style={{
+                                    width: '200px'
+                                }}/>
+                            </div>
+                            <div>
+                                <h4 style={{
+                                    textAlign: 'center',
+                                    marginBottom: "10px",
+                                    fontSize: "20px"
+                                }}>Secret Weapon Deathmatch</h4>
+                                <img src={swdm} alt="" style={{
+                                    width: '250px'
+                                }}/>
+                            </div>
+                            <div>
+                                <h4 style={{
+                                    textAlign: 'center',
+                                    marginBottom: "10px",
+                                    fontSize: "20px"
+                                }}>Stock Gudang</h4>
+                                <img src={stockGudang} alt="" style={{
+                                    width: '250px'
+                                }}/>
+                            </div>
+                            <div>
+                                <h4 style={{
+                                    textAlign: 'center',
+                                    marginBottom: "10px",
+                                    fontSize: "20px"
+                                }}>RAPB</h4>
+                                <img src={rapb} alt="" style={{
+                                    width: '250px'
+                                }}/>
+                            </div>
+                        </div>
+                    </div>
+                    <ButtonLink to={'/'}>Back to Dashboard</ButtonLink>
                 </div>
-                <div>
-                    <p>Saya pernah mengerjakan sebuah proyek baik proyek secara tim maupun individu (tekan nama pada website dibawah ini)</p>
-                </div>
-                <div className="project-list">
-                    <div>
-                        <a href="https://swdm.me/" target="_blank">swdm.me</a>
-                        <img src={swdm} alt=""/>
-                    </div>
-                    <div>
-                        <a href="https://bahagiaku-ep.my.id/" target="_blank">Bahagiaku Event Organizer</a>
-                        <img src={bahagiaku} alt=""/>
-                    </div>
-                    <div>
-                        <a href="https://sketchfab.com/3d-models/scythe-of-the-dark-doom-c0ff16bd55634345afaf19fc602b665a" target="_blank">Scythe of The Dark Doom</a>
-                        <img src={scythe} alt=""/>
-                    </div>
-                    <div>
-                        <a href="#" target="_blank">Stock Gudang</a>
-                        <img src={stockGudang} alt=""/>
-                    </div>
-                </div>
-            </section>
+            </fieldset>  
+        </header>
         </>
     );
 }
