@@ -29,6 +29,8 @@ function ButtonLink({to, children}) {
             ></i>
             <span
                 style={{
+                    display: 'flex',
+                    gap: '3px',
                     transition: 'all .3s ease',
                     textAlign: 'justify',
                     letterSpacing: '1.3px',
