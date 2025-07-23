@@ -20,7 +20,7 @@ function Projects() {
                                 textAlign: 'center'
                             }}
                         >
-                            I've been implement much of works that was originally created by me, this work either a web application or 3d Models. take a look. Some of my project has link to show my original content, some of them doesn't have link or just show Github
+                            I've been implement much of works that was originally created by me, this work either a web application or 3d Models. take a look. Some of my project has link to show my original content, some of them doesn't have link or just show Github repositories
                         </p>
                     </div>
                     <div 
@@ -63,7 +63,7 @@ function Projects() {
                             <h4 style={{
                                 marginBottom: "10px",
                                 fontSize: "24px"
-                            }}><a href="https://swdm.me/" target='_blank'>3. Rencana Anggaran Penerimaan dan Beban</a></h4>
+                            }}><a href="https://github.com/Ichiroki/rencana-anggaran-pendapatan-belanja" target='_blank'>3. Monthly Income Budget Plan Application</a></h4>
                             <div>
                                 <span style={{display: 'flex'}}>Kind of Project : Website</span>
                                 <ul style={{marginLeft: '1rem', marginTop: '15px'}}>
@@ -78,7 +78,53 @@ function Projects() {
                             <h4 style={{
                                 marginBottom: "10px",
                                 fontSize: "24px"
-                            }}><a href="https://ichiroki.itch.io/pixel-food-and-item-16-x-16" target='_blank'>4. Pixel Food and Item | 16 x 16</a></h4>
+                            }}><a href="https://github.com/Ichiroki/asset-management" target='_blank'>4. Asset Lending Application</a></h4>
+                            <div>
+                                <span style={{display: 'flex'}}>Kind of Project : Website</span>
+                                <ul style={{marginLeft: '1rem', marginTop: '15px'}}>
+                                    <li>Planning and developing website from the start, including Frontend and Backend</li>
+                                    <li>Design User Interface for website</li>
+                                    <li>Build and integrated application with MySQL database</li>
+                                    <li>Implement role system for a better security</li>
+                                    <li>Create Inventory / Asset Lending feature</li>
+                                    <li>Create notification if a lending ticket was been approved / rejected</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style={{
+                                marginBottom: "10px",
+                                fontSize: "24px"
+                            }}><a href="https://github.com/Ichiroki/stock-gudang" target='_blank'>5. Warehouse Stock</a></h4>
+                            <div>
+                                <span style={{display: 'flex'}}>Kind of Project : Website</span>
+                                <ul style={{marginLeft: '1rem', marginTop: '15px'}}>
+                                    <li>Planning and developing website from the start, including Frontend and Backend</li>
+                                    <li>Build and integrated application with MySQL database</li>
+                                    <li>Create CRUD feature</li>
+                                    <li>Create build invoices incoming and exit many items / products from warehouse</li>
+                                    <li>Implement API for organized data in real-time</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style={{
+                                marginBottom: "10px",
+                                fontSize: "24px"
+                            }}><a href="https://www.roblox.com/games/81144152575768/" target='_blank'>6. Tropical Island</a></h4>
+                            <div>
+                                <span style={{display: 'flex'}}>Kind of Project : Game (Roblox)</span>
+                                <ul style={{marginLeft: '1rem', marginTop: '15px'}}>
+                                    <li>Create a game with Roblox Studio that use Lua Language</li>
+                                    <li>Design adaptable UI / UX</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style={{
+                                marginBottom: "10px",
+                                fontSize: "24px"
+                            }}><a href="https://ichiroki.itch.io/pixel-food-and-item-16-x-16" target='_blank'>7. Pixel Food and Item | 16 x 16</a></h4>
                             <div>
                                 <span style={{display: 'flex'}}>Kind of Project : Design</span>
                                 <ul style={{marginLeft: '1rem', marginTop: '15px'}}>
