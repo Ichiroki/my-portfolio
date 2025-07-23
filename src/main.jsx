@@ -5,7 +5,7 @@ import "./style.css"
 import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='/my-portfolio'>
+  <BrowserRouter>
     <App />
   </BrowserRouter>
 )
