@@ -1,6 +1,7 @@
 import { useLayoutEffect } from 'react'
 import ButtonLink from '../../component/ButtonLink'
 import './contact.css'
+import { Link } from 'react-router-dom'
 
 function Contact() {
     useLayoutEffect(() => {
@@ -8,38 +9,16 @@ function Contact() {
     }, [])
     return (
         <>
-            <header id="about" className='about'>         
+            <header id="contact" className='contact'>
                 <fieldset className='fade-in glassmorphism'>
                     <legend>
                         <h1>How to contact me ?</h1>
                     </legend>
-                    <div className='about-content'>
-                        <div
-                        style={{
-                            display: 'flex',
-                            gap: '5px'
-                        }}>
-                            <ButtonLink to={'/'}>
-                                <i className="bi bi-facebook"></i>
-                                <span>Facebook</span>
-                            </ButtonLink>
-                            <ButtonLink to={'/'}>
-                                <i className="bi bi-instagram"></i>
-                                <span>Instagram</span>
-                            </ButtonLink>
-                            <ButtonLink to={'/'}>
-                                <i className="bi bi-github"></i>
-                                <span>GitHub</span>
-                            </ButtonLink>
-                            <ButtonLink to={'/'}>
-                                <i className="bi bi-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </ButtonLink>
-                            <ButtonLink to={'/'}>
-                                <i className="bi bi-envelope"></i>
-                                <span>Email</span>
-                            </ButtonLink>
-                        </div>
+                    <div className='contact-content'>
+                        <a href={'https://www.instagram.com/xchiroki__/'} className='link'>Instagram</a>
+                        <a href={'https://github.com/Ichiroki'} className='link'>Github</a>
+                        <a href={'https://www.linkedin.com/in/fahrezi-rizqiawan-82804a238/'} className='link'>LinkedIn</a>
+                        <a href={'mailto:fahrezirizqiawan12649@gmail.com'} className='link'>Email</a>
                         <ButtonLink to={'/'}>Back to Dashboard</ButtonLink>
                     </div>
                 </fieldset>  
